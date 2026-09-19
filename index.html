@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="background">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="grid"></div>
+    </div>
+
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-mark">GZ</div>
+            <div>
+                <h1>GAMEZONE</h1>
+                <span>PLAY • COMPETE • MASTER</span>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <button class="nav-btn active" data-section="home">HOME</button>
+            <button class="nav-btn" data-section="games">GAMES</button>
+            <button class="nav-btn" data-section="profile">PROFILE</button>
+        </nav>
+
+        <div class="player-mini">
+            <div class="level">
+                <span>LVL</span>
+                <strong id="levelValue">01</strong>
+            </div>
+
+            <div class="xp-box">
+                <div class="xp-top">
+                    <span>XP</span>
+                    <span id="xpText">0 / 100</span>
+                </div>
+                <div class="xp-bar">
+                    <div id="xpBar"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="home" class="page active-page">
+
+            <div class="hero">
+                <div class="hero-copy">
+                    <div class="eyebrow">
+                        <span class="live-dot"></span>
+                        GAME SESSION READY
+                    </div>
+
+                    <h2>
+                        YOUR
+                        <span>PLAYGROUND</span>
+                        AWAITS.
+                    </h2>
+
+                    <p>
+                        Five different challenges. One mission.
+                        Beat your own record.
+                    </p>
+
+                    <button class="start-btn" id="startBtn">
+                        <span>ENTER GAMEZONE</span>
+                        <b>→</b>
+                    </button>
+                </div>
+
+                <div class="hero-console">
+                    <div class="console-top">
+                        <span>GAMEZONE / SYSTEM</span>
+                        <span>ONLINE</span>
+                    </div>
+
+                    <div class="console-screen">
+                        <div class="scan"></div>
+                        <div class="screen-content">
+                            <small>WELCOME PLAYER</small>
+                            <strong>READY?</strong>
+                            <div class="equalizer">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="console-controls">
+                        <div class="d-pad">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="buttons">
+                            <b></b>
+                            <b></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-heading">
+                <div>
+                    <span>SELECT YOUR CHALLENGE</span>
+                    <h3>Five ways to play</h3>
+                </div>
+                <button id="viewAllBtn">VIEW ALL →</button>
+            </div>
+
+            <div class="games-grid">
+
+                <article class="game-card memory" data-game="memory">
+                    <div class="game-number">01</div>
+                    <div class="game-icon">◈</div>
+
+                    <div class="game-info">
+                        <span>MEMORY / STRATEGY</span>
+                        <h4>Memory<br>Challenge</h4>
+                        <p>Remember. Match. Survive.</p>
+                    </div>
+
+                    <button class="play-card">PLAY →</button>
+                </article>
+
+                <article class="game-card puzzle" data-game="puzzle">
+                    <div class="game-number">02</div>
+                    <div class="game-icon">◇</div>
+
+                    <div class="game-info">
+                        <span>LOGIC / PUZZLE</span>
+                        <h4>Puzzle<br>Lab</h4>
+                        <p>Build the impossible.</p>
+                    </div>
+
+                    <button class="play-card">PLAY →</button>
+                </article>
+
+                <article class="game-card quiz" data-game="quiz">
+                    <div class="game-number">03</div>
+                    <div class="game-icon">?</div>
+
+                    <div class="game-info">
+                        <span>KNOWLEDGE / SPEED</span>
+                        <h4>Quiz<br>Arena</h4>
+                        <p>Think fast. Answer faster.</p>
+                    </div>
+
+                    <button class="play-card">PLAY →</button>
+                </article>
+
+                <article class="game-card racing" data-game="racing">
+                    <div class="game-number">04</div>
+                    <div class="game-icon">↯</div>
+
+                    <div class="game-info">
+                        <span>RACING / REFLEX</span>
+                        <h4>Neon<br>Rush</h4>
+                        <p>Speed has no limits.</p>
+                    </div>
+
+                    <button class="play-card">PLAY →</button>
+                </article>
+
+                <article class="game-card target" data-game="target">
+                    <div class="game-number">05</div>
+                    <div class="game-icon">⊙</div>
+
+                    <div class="game-info">
+                        <span>AIM / PRECISION</span>
+                        <h4>Target<br>Zone</h4>
+                        <p>Hit. Combo. Dominate.</p>
+                    </div>
+
+                    <button class="play-card">PLAY →</button>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section id="games" class="page">
+
+            <div class="page-title">
+                <span>GAME LIBRARY</span>
+                <h2>Choose your arena.</h2>
+            </div>
+
+            <div class="library-grid">
+                <button class="library-item" data-game="memory">
+                    <span>01</span>
+                    <strong>MEMORY CHALLENGE</strong>
+                    <small>Memory / Strategy</small>
+                    <b>→</b>
+                </button>
+
+                <button class="library-item" data-game="puzzle">
+                    <span>02</span>
+                    <strong>PUZZLE LAB</strong>
+                    <small>Logic / Puzzle</small>
+                    <b>→</b>
+                </button>
+
+                <button class="library-item" data-game="quiz">
+                    <span>03</span>
+                    <strong>QUIZ ARENA</strong>
+                    <small>Knowledge / Speed</small>
+                    <b>→</b>
+                </button>
+
+                <button class="library-item" data-game="racing">
+                    <span>04</span>
+                    <strong>NEON RUSH</strong>
+                    <small>Racing / Reflex</small>
+                    <b>→</b>
+                </button>
+
+                <button class="library-item" data-game="target">
+                    <span>05</span>
+                    <strong>TARGET ZONE</strong>
+                    <small>Aim / Precision</small>
+                    <b>→</b>
+                </button>
+            </div>
+
+        </section>
+
+        <section id="profile" class="page">
+
+            <div class="page-title">
+                <span>PLAYER PROFILE</span>
+                <h2>Your progress.</h2>
+            </div>
+
+            <div class="profile-layout">
+
+                <div class="profile-main">
+                    <div class="avatar">G</div>
+                    <h3>PLAYER ONE</h3>
+                    <span>GAMEZONE MEMBER</span>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat">
+                        <span>TOTAL XP</span>
+                        <strong id="profileXp">0</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>LEVEL</span>
+                        <strong id="profileLevel">01</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>GAMES</span>
+                        <strong id="gamesPlayed">0</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>BEST SCORE</span>
+                        <strong id="bestScore">0</strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <div class="game-overlay" id="gameOverlay">
+
+        <div class="game-window">
+
+            <button class="close-game" id="closeGame">×</button>
+
+            <div class="game-header">
+                <div>
+                    <span id="gameCategory">GAME</span>
+                    <h2 id="gameTitle">Game</h2>
+                </div>
+
+                <div class="game-stat-box">
+                    <span>SCORE</span>
+                    <strong id="gameScore">0</strong>
+                </div>
+            </div>
+
+            <div id="gameContent" class="game-content"></div>
+
+        </div>
+
+    </div>
+
+    <div class="notification" id="notification">
+        <span>✓</span>
+        <p id="notificationText">Game loaded</p>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
