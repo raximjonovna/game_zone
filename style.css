@@ -517,8 +517,7 @@ main {
 .puzzle::after { background: #a855f7; }
 .quiz::after { background: #ff8a00; }
 .racing::after { background: var(--accent-2); }
-.target::after { background: var(--danger); }
-
+.game-card.target::after { background: var(--danger); }
 .game-card:hover {
     transform: translateY(-6px);
     border-color: #4a4f5c;
@@ -1287,46 +1286,42 @@ main {
     background-size: 35px 35px;
     pointer-events: none;
 }
-
-.target {
+.target-arena .target {
     position: absolute;
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    min-height: 80px;
+    padding: 0;
+    border: 2px solid #ffffff;
     border-radius: 50%;
-    border: 2px solid #fff;
     background: transparent;
     cursor: crosshair;
     transform: translate(-50%, -50%);
-    padding: 0;
     transition: transform .1s;
     z-index: 5;
+    appearance: none;
+    -webkit-appearance: none;
 }
-
-.target::before,
-.target::after,
-.target span {
+.target-arena .target::before {
     content: "";
     position: absolute;
-    inset: 15%;
+    inset: 12px;
     border: 2px solid var(--danger);
     border-radius: 50%;
 }
 
-.target::after {
-    inset: 30%;
+.target-arena .target::after {
+    content: "";
+    position: absolute;
+    inset: 27px;
+    border-radius: 50%;
     background: var(--danger);
 }
 
-.target span {
-    inset: 47%;
-    background: #fff;
-    border: 0;
-    z-index: 2;
-}
-
-.target:hover {
+.target-arena .target:hover {
     transform: translate(-50%, -50%) scale(1.08);
 }
-
-@media (max-width: 650px) {
 
     .quiz-answers {
         grid-template-columns: 1fr;
@@ -1347,4 +1342,3 @@ main {
     .puzzle-board {
         width: min(350px, 100%);
     }
-}
